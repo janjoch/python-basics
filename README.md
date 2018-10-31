@@ -9,7 +9,7 @@ This repository contains various basic programming examples with Python 3.6.xx u
 - GUI programming with TKinter (work in progress)
 - Exception Handling (work in progress)
 - Logging
-- Decorators (work in progress)
+- Decorators
 - Database with SQLite
 
 
