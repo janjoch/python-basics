@@ -1,7 +1,7 @@
 # Python Basics
 This repository contains various basic programming examples with Python 3.6.xx using different Libraries
 
-- Datatypes (work in progress)
+- Datatypes
 - Control Structures
 - Plotting with matplotlib and seaborn (work in progress)
 - Pandas Data Analysis (work in progress)
