@@ -7,7 +7,7 @@ import traceback
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use("../plot_style.mplstyle")
-from matplotlib.animation import FuncAnimation, writers
+from matplotlib.animation import FuncAnimation
 ###############################################################################
 #
 # Header
@@ -64,8 +64,8 @@ if __name__ == "__main__":
         
         #Plot figure
         fig, ax = plt.subplots(figsize=(9,7))
-        ax.plot(x1,y1,x2,y2,x3,y3, lw=2)
-        ax.plot(xx, yy,alpha=0.15)
+        ax.plot(x1,y1,x2,y2,x3,y3, lw=3)
+        ax.plot(xx, yy, "o", color="lightblue", alpha=0.008)
         ax.plot(cross, 0*cross, lw=0.5, color="black")
         ax.plot(0*cross, cross, lw=0.5, color="black")
         ax.legend(["Fall 1","Fall 2","Fall 3"])
@@ -80,6 +80,7 @@ if __name__ == "__main__":
         #Animation
         ln, = ax.plot([], [], 'yellowgreen', lw=6, animated=True)
         lm, = ax.plot([], [], 'green', lw=6, animated=True)
+        pp = np.linspace(max(p2), -max(p2), 100)
         
         #Define update function
         def update(frame):
@@ -97,19 +98,23 @@ if __name__ == "__main__":
                 yy = [0, r1 * np.sin(p1[frame-50])]
                 ln.set_data(x, y)
                 lm.set_data(xx, yy)
-            elif frame > 150:
+            elif 150 < frame <= 200:
                 x = [r1 * np.cos(max(p1)), r1 * np.cos(max(p1)) + r2 * np.cos(max(p1)+p2[frame-150])]
                 y = [r1 * np.sin(max(p1)), r1 * np.sin(max(p1)) + r2 * np.sin(max(p1)+p2[frame-150])]
                 xx = [0, r1 * np.cos(max(p1))]
                 yy = [0, r1 * np.sin(max(p1))]
                 ln.set_data(x, y)
                 lm.set_data(xx, yy)
+            elif frame > 200:
+                x = [r1 * np.cos(p1[::-1][frame-200]), r1 * np.cos(p1[::-1][frame-200]) + r2 * np.cos(p1[::-1][frame-200]+pp[frame-200])]
+                y = [r1 * np.sin(p1[::-1][frame-200]), r1 * np.sin(p1[::-1][frame-200]) + r2 * np.sin(p1[::-1][frame-200]+pp[frame-200])]
+                xx = [0, r1 * np.cos(p1[::-1][frame-200])]
+                yy = [0, r1 * np.sin(p1[::-1][frame-200])]
+                ln.set_data(x, y)
+                lm.set_data(xx, yy)
             return ln, lm,
         
-        ani = FuncAnimation(fig, update, frames=200, blit=True)
+        ani = FuncAnimation(fig, update, frames=300, blit=True)
         
-#        #Save figure
-#        ani.save('animation.gif', writer='pillow', fps=1)
-    
     except:
         traceback.print_exc()
