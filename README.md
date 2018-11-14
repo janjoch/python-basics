@@ -11,6 +11,5 @@ This repository contains various basic programming examples with Python 3.6.xx u
 - Logging
 - Decorators
 - Database with SQLite
-- PDF util for merging and spliting pdfs
 
 
