@@ -4,7 +4,7 @@ This repository contains various basic programming examples with Python 3.6.xx u
 - Datatypes
 - Control Structures
 - Plotting with matplotlib and seaborn
-- Pandas Data Analysis (work in progress)
+- Pandas Data Analysis
 - Object oriented programming (work in progress)
 - GUI programming with TKinter (small projects)
 - Exception Handling (work in progress)
