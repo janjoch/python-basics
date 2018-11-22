@@ -25,7 +25,7 @@ Created on Wed Nov 14 07:35:37 2018
 ###############################################################################
 class pdf_GUI:
     
-    def __init__(self, master):
+    def __init__(self, master, img):
         """Initialize the GUI - Pdf util
     
         Args:
@@ -33,12 +33,18 @@ class pdf_GUI:
         """ 
         #Settings for GUI
         self.master = master
-        self.master.geometry("600x225+400+200")
+        self.master.geometry("600x275+400+200")
         self.master.wm_title("PDF merger")
         self.master.configure(background="white", )
         self.font1 = Font(family="Calibri", size=16, weight="bold")
         self.font2 = Font(family="Calibri", size=12)
         self.font3 = Font(family="Calibri", size=8)
+        
+        #Insert pdf icon
+        logo = tk.Canvas(self.master, width=100, height=80, bd=0, bg="white",
+                            highlightthickness=0)
+        logo.grid(row=0, column=2, columnspan=1, padx=(0, 0))
+        logo.create_image(0,10, anchor=tk.NW, image=img)
                           
         #Create Caption Text
         self.create_text("PDF merger", self.font1, 
@@ -149,9 +155,10 @@ if __name__ == "__main__":
         
         #Initialize GUI
         root = tk.Tk()
+        img = tk.PhotoImage(file="pdf_icon.gif")
      
         #Starting GUI
-        app = pdf_GUI(root)
+        app = pdf_GUI(root, img)
         root.mainloop()
         
         
