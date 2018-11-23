@@ -12,5 +12,6 @@ This repository contains various basic programming examples with Python 3.6.xx u
 - Decorators
 - Database with SQLite
 - Regular Expressions
+- Python Cheatsheets
 
 
