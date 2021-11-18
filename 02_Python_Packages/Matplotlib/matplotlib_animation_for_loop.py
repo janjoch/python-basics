@@ -43,7 +43,7 @@ if __name__ == "__main__":
         #Animation
         for i in range(n):
             line1.set_data(x[i], y[i])
-            plt.pause(0.1)
+            plt.pause(0.01)
         
         plt.ioff()    
         plt.show()
