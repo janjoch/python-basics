@@ -1,17 +1,14 @@
 # Python Basics
-This repository contains various basic programming examples with Python 3.6.xx using different Libraries
+This repository contains various basic programming examples with Python 3.7.xx
 
-- Datatypes
-- Control Structures
-- Plotting with matplotlib and seaborn
-- Pandas Data Analysis
-- Object oriented programming (work in progress)
-- GUI programming with TKinter (small projects)
-- Exception Handling (work in progress)
-- Logging
-- Decorators
-- Database with SQLite
-- Regular Expressions
+- Jupyter - Introduction
+- Python Basics
+- Python Packages
+- Advanced Python Stuff
+- Git
 - Python Cheatsheets
 
 
+## Credits 
+* https://gist.github.com/kenjyco/69eeb503125035f21a9d
+* https://github.com/jerry-git/learn-python3
