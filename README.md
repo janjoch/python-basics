@@ -9,6 +9,7 @@ This repository contains various basic programming examples with Python 3.7.xx
 - Python Cheatsheets
 
 
-## Credits 
+## Credits
+* Most of the content of this course was put together by **Marco Jordi from [Comet Plasma Control Technologies](https://comet.tech)**
 * https://gist.github.com/kenjyco/69eeb503125035f21a9d
 * https://github.com/jerry-git/learn-python3
